@@ -14,15 +14,15 @@ function Form() {
       <div className="Maincontainer">
         <img id="img" src={Img} alt="Img" />
         <div className="Formcontainer">
-          <div className="headingg">&nbsp;&nbsp;Meeting Information</div>
-          <Input Placeholder="Username" />
-          <Input Placeholder="Institude Name" />
-          <Input Placeholder="Email Address" />
-          <Input Placeholder="Contect Number" />
-          <Input Placeholder="Website Link " />
-          <Input Placeholder="Meeting Date" />
-          <Input Placeholder="Post" />
-          <Button title="send" />
+          <div className="headingg">&nbsp;&nbsp;Provide Training</div>
+          <Input Placeholder="Trainer Name" />
+          <Input Placeholder="Traning Subject" />
+          <Input Placeholder="Company or Organization Name" />
+          <Input Placeholder="Training Period ( In day's )" />
+          <Input Placeholder="Start Date" />
+          <Input Placeholder="Start Time" />
+          <Input Placeholder="Student Enrolled" />
+          <Button title="Set Training" />
         </div>
       </div>
 

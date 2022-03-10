@@ -44,7 +44,7 @@ const Nav_side = () => {
 
                 <div class="app-utilities col-auto">
                   <div class="app-utility-item app-notifications-dropdown dropdown">
-                    <Link class="Link" to="/interviewRequest">
+                    <Link class="Link" to="/sendRequest">
                       <button type="button" id="secSp" class="second-btn">Send Request</button>
                     </Link>
                     <a href="">

@@ -15,10 +15,10 @@ function Student() {
   useEffect(() => {
     // https://api.github.com/users
     // https://iteg.herokuapp.com/api/Student_Reg/Registation
-    fetch("https://api.github.com/users").then((result) => {
+    fetch("https://itegserver.herokuapp.com/getStudentList").then((result) => {
       result.json().then((response) => {
         console.log("result", response)
-        setData(response);
+        setData(response.data);
       });
     });
   }, []);
@@ -52,7 +52,7 @@ function Student() {
 
               <tr className="border1" >
 
-                <td>{item.node_id}</td>
+                <td>{item.studentName}</td>
                 <td>{item.node_id}</td>
                 <td>{item.node_id}</td>
                 <td>{item.node_id}</td>

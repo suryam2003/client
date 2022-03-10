@@ -1,90 +1,81 @@
 /* eslint-disable react/jsx-pascal-case */
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import './card.css';
 import Nav_side from '../Nav_side';
 
 
 export default function TrainingList() {
+    const [post, setPosts] = useState([]);
+
+
+    // useEffect(async () => {
+    //     fetchProducts();
+    // }, []);
+    // const fetchProducts = () => {
+    //     axios
+    //   .get('https://shoppingapiacme.herokuapp.com/shopping')
+    //         .get('https://iteg.herokuapp.com/api/Student_Reg/List')
+    //         .then((res) => {
+    //             console.log(res);
+    //             setPosts(res.data);
+    //         })
+    //         .catch((err) => {
+    //             console.log(err);
+    //         });
+    // };
+    useEffect(() => {
+
+        fetch("https://iteg.herokuapp.com/api/Student_Reg/List").then((result) => {
+            result.json().then((response) => {
+                console.log("result", response)
+                setPosts(response.data);
+            });
+        });
+    }, []);
+    console.log(post);
     return (
         <div>
             <Nav_side />
 
-            {/* <div>
-            <h1 id="#head1"> List of Training</h1>
-        </div>
-        <div className='container'>
-
-            <div className='row'>
-                < div className='trnCardBody'>
-                    <div className='card'>
-                        <div className='card-body'>
-                            <img id="imageT" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg" className="png1" alt="..." />
-                            <label>Trainer Name:__________   </label><br></br>
-                            <label>Date:__________   </label><br></br>
-                            <label>Time:__________   </label>
+            <div class="row">
+                {post.map((product) => (
+                    <div class="d-flex justify-content-around">
+                        <div class="card col-4">
+                            <div class="d-flex justify-content-center col-12 p-1" id="compName">
+                                {/* {product.FirstName} */}
+                                Company Name
+                            </div>
+                            <div class="form-group row">
+                                <label for="trainerName" class=" col-sm-4 col-form-label" id="subHeading">Trainer Name</label>
+                                <div class="col-sm-7">
+                                    <input type="text" readonly class="form-control-plaintext" id="trainerName" value={product.FirstName + " " + product.LastName} />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="trainingSubject" class="col-sm-4 col-form-label" id="subHeading">Training Subject</label>
+                                <div class="col-sm-7">
+                                    <input type="text" readonly class="form-control-plaintext" id="trainingSubject" value={product.Profile} />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="startDate" class="col-sm-4 col-form-label" id="subHeading">Start Date</label>
+                                <div class="col-sm-7">
+                                    <input type="text" readonly class="form-control-plaintext" id="startDate" value={product.date} />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="trainingDuration" class="col-sm-4 col-form-label" id="subHeading">Traning Duration</label>
+                                <div class="col-sm-7">
+                                    <input type="text" readonly class="form-control-plaintext" id="trainingDuration" value={product.date} />
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                < div className='trnCardBody'>
-                    <div className='card'>
-                        <div className='card-body'>
-                            <img id="imageT" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg" className="png1" alt="..." />
-                            <label>Trainer Name:__________   </label><br></br>
-                            <label>Date:__________   </label><br></br>
-                            <label>Time:__________   </label>
-                        </div>
-                    </div>
-                </div>
-                < div className='trnCardBody'>
-                    <div className='card'>
-                        <div className='card-body'>
-
-                            <img id="imageT" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg" className="png1" alt="..." /><br></br>
-                            <label>Trainer Name:__________   </label><br></br>
-                            <label>Date:__________   </label><br></br>
-                            <label>Time:__________   </label>
-                        </div>
-                    </div>
-                </div>
-
-                < div className='trnCardBody'>
-                    <div className='card'>
-                        <div className='card-body'>
-
-                            <img id="imageT" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg" className="png1" alt="..." /><br></br>
-                            <label>Trainer Name:__________   </label><br></br>
-                            <label>Date:__________   </label><br></br>
-                            <label>Time:__________   </label>
-                        </div>
-                    </div>
-                </div>
-                < div className='trnCardBody'>
-                    <div className='card'>
-                        <div className='card-body'>
-
-                            <img id="imageT" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg" className="png1" alt="..." /><br></br>
-                            <label>Trainer Name:__________   </label><br></br>
-                            <label>Date:__________   </label><br></br>
-                            <label>Time:__________   </label>
-                        </div>
-                    </div>
-                </div>
-                < div className='trnCardBody'>
-                    <div className='card'>
-                        <div className='card-body'>
-
-                            <img id="imageT" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg" className="png1" alt="..." /><br></br>
-                            <label>Trainer Name:__________   </label><br></br>
-                            <label>Date:__________   </label><br></br>
-                            <label>Time:__________   </label>
-                        </div>
-                    </div>
-                </div>
+                ))}
             </div>
-        </div> */}
-            {/* <div id="soonn">
-                <div id="soon">Comming Soon.....</div>
-            </div> */}
+
+
 
         </div>
     )
