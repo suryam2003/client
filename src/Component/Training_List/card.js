@@ -37,11 +37,14 @@ export default function TrainingList() {
     return (
         <div>
             <Nav_side />
-
-            <div class="row">
+            <div>
+                <div class="d-flex justify-content-center display-4 p-4" id="trainingHeading">
+                    Training's
+                </div>
+            <div class="row row-cols-2 col-11" id="mainRow">
                 {post.map((product) => (
-                    <div class="d-flex justify-content-around">
-                        <div class="card col-4">
+                    <div class="col pb-4 pl-4">
+                        <div class="card col-10">
                             <div class="d-flex justify-content-center col-12 p-1" id="compName">
                                 {/* {product.FirstName} */}
                                 Company Name
@@ -74,7 +77,7 @@ export default function TrainingList() {
                     </div>
                 ))}
             </div>
-
+</div>
 
 
         </div>
