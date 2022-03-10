@@ -16,6 +16,8 @@ import ListOfCompanies from './Component/Mayank/Npage/Comps';
 import MeetingRequest from './Component/meetingRequest/src/App';
 import TrainingList from './Component/Training_List/card';
 import Intvrequest from './Component/IntvRequest/Form';
+import RequestAccept from './Component/requestAccept/Accept';
+
 
 
 
@@ -26,7 +28,7 @@ function App() {
 
       <div class="col-10 overview">
         <Routes>
-          <Route exact path="" element={<TandP />} />
+          {/* <Route exact path="" element={<TandP />} /> */}
           <Route exact path="/main" element={<TandP />} />
           <Route exact path='/listOfStudent' element={<Student />} />
           <Route exact path='/notification' element={<Notification />} />
@@ -35,6 +37,7 @@ function App() {
           <Route exact path='/sendRequest' element={<Intvrequest />} />
           <Route exact path='/meetingRequest' element={<MeetingRequest />} />
           <Route exact path='/trainingList' element={<TrainingList />} />
+          <Route exact path='/acceptRequest' element={<RequestAccept/>} />
         </Routes>
 
       </div >

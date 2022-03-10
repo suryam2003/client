@@ -46,7 +46,7 @@ function Intvrequest() {
   return (
     <>
       <Nav_side />
-      <div className="formContainer">
+      <div className="formContainer col-9">
         <h3 className="heading">Interview Request</h3>
         <div className="form">
           <div className="inputControl">
@@ -85,7 +85,7 @@ function Intvrequest() {
             <textarea className="textarea" placeholder="Short Message" name="sortMsg" value={intvRequest.sortMsg} onChange={handleChange} />
           </div>
         </div>
-        <button className="btn" onclick={SendRequest()}>Send</button>
+        <button class="btn btn-outline-primary mb-5 mt-3 pr-3 pl-3" onclick={SendRequest()}>Send</button>
       </div>
     </>
   );

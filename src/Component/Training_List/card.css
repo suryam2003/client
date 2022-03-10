@@ -1,19 +1,42 @@
-#compName{
+#compName {
     color: #3c5898;
     font-weight: 400;
     font-size: 2em;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-#subHeading{
+#subHeading {
     margin-left: 1em;
     font-weight: 600;
+    font-size: 1.1em;
     font-family: 'Times New Roman', Times, serif;
 }
 
-#mainRow{
+#trainingHeading{
+    color: #3c5898;
+    font-family: 'Times New Roman', Times, serif;
+    border: 0px 0px 2px 0px solid #3c5898;
+}
+
+#mainRow {
     margin-left: 6em;
     margin-top: 5em;
+
+}
+
+#glass {
+    background: rgba(194, 217, 242, 0.24);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.8px);
+    -webkit-backdrop-filter: blur(10.8px);
+    border: 1px solid rgba(194, 217, 242, 0.46);
+}
+
+#trainingDuration, #startDate, #trainingSubject, #trainerName {
+    color: grey;
+    font-size: 1.1em;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* #trainingHeading{

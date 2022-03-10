@@ -44,7 +44,7 @@ export default function TrainingList() {
             <div class="row row-cols-2 col-11" id="mainRow">
                 {post.map((product) => (
                     <div class="col pb-4 pl-4">
-                        <div class="card col-10">
+                        <div class="card col-10"  id="glass">
                             <div class="d-flex justify-content-center col-12 p-1" id="compName">
                                 {/* {product.FirstName} */}
                                 Company Name

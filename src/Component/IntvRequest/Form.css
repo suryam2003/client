@@ -2,20 +2,10 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* height: 80%; */
-  width: auto;
-  /* padding: 30px; */
+  margin-left: 10em;
   border-radius: 10px;
-  /* border: .1px solid #838383; */
-  /* -webkit-box-shadow: -2px 2px 4px 0px rgba(0,0,0,0.76);
--moz-box-shadow: -2px 2px 4px 0px rgba(0,0,0,0.76);
-box-shadow: -2px 2px 4px 0px rgba(0,0,0,0.76); */
-
-  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
-  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; */
 }
 
 .heading {
@@ -79,16 +69,6 @@ textarea:focus {
   outline: none;
 }
 
-.btn {
-  border: none;
-  background-color: rgb(83, 83, 194);
-  color: #fff;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  padding: 12px 30px;
-  border-radius: 2px;
-  /* width: 200px; */
-}
 
 
 @media only screen and (max-width: 500px) {
