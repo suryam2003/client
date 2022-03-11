@@ -7,16 +7,17 @@ import { Routes, Route } from 'react-router-dom';
 // import Nav_side from './Component/Nav_side';
 
 
-import TandP from './Component/Main_page/TandP';
-import Notification from './Component/Notification/Notification';
+// import TandP from './Component/Main_page/TandP';
+// import Notification from './Component/Notification/Notification';
 import Student from './Component/Student_list/Student';
-import EditP from './Component/Mayank/EditPage/EditP';
-import Done from './Component/Mayank/FDone/Done';
-import ListOfCompanies from './Component/Mayank/Npage/Comps';
-import MeetingRequest from './Component/meetingRequest/src/App';
-import TrainingList from './Component/Training_List/card';
-import Intvrequest from './Component/IntvRequest/Form';
-import RequestAccept from './Component/requestAccept/Accept';
+// import EditP from './Component/Mayank/EditPage/EditP';
+// import Done from './Component/Mayank/FDone/Done';
+// import ListOfCompanies from './Component/Mayank/Npage/Comps';
+// import MeetingRequest from './Component/meetingRequest/src/App';
+// import TrainingList from './Component/Training_List/card';
+// import Intvrequest from './Component/IntvRequest/Form';
+// import RequestAccept from './Component/requestAccept/Accept';
+import StudentTable from './Component/static';
 
 
 
@@ -27,8 +28,7 @@ function App() {
       {/* <Nav_side /> */}
 
       <div class="col-10 overview">
-        <Routes>
-          {/* <Route exact path="" element={<TandP />} /> */}
+        {/* <Routes>
           <Route exact path="/main" element={<TandP />} />
           <Route exact path='/listOfStudent' element={<Student />} />
           <Route exact path='/notification' element={<Notification />} />
@@ -38,7 +38,9 @@ function App() {
           <Route exact path='/meetingRequest' element={<MeetingRequest />} />
           <Route exact path='/trainingList' element={<TrainingList />} />
           <Route exact path='/acceptRequest' element={<RequestAccept/>} />
-        </Routes>
+        </Routes> */}
+        {/* <StudentTable/> */}
+        <Student/>
 
       </div >
     </div>

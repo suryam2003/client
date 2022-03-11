@@ -10,30 +10,30 @@ import './button.css'
 
 function Student() {
   const [data, setData] = useState([]);
-
-
   useEffect(() => {
     // https://api.github.com/users
     // https://iteg.herokuapp.com/api/Student_Reg/Registation
     fetch("https://api.github.com/users").then((result) => {
       result.json().then((response) => {
-        console.log("result", response)
+        console.log("result", response.data)
         setData(response);
       });
     });
   }, []);
-  console.log(data);
+  console.log();
   return (
     <>
-      <Nav_side />
-      <Searchbar />
+        <Nav_side />
+      <div>
+        <Searchbar />
+      </div>
+
       <br></br>
       {/* <br></br> */}
-      <div>
-        <table id="tb" className="table col-12 table-borderrd table-striped mb-0  containear-sm table-wrapper-scroll-y my-custom-scrollbar">
-          <thead>
-            <tr className="border">
-
+      <div id="studentTabel">
+        <table id="customers" className="table table-sm">
+          <thead style={{ position: 'sticky', top: '135px', width: '100%', backgroundColor: '#f4f7fc', zIndex: '5' }}>
+            <tr>
               <th> Student Name</th>
               <th>Skill's</th>
               <th >Catagoury</th>
@@ -43,8 +43,6 @@ function Student() {
               <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
               <th width="" >Action</th>
               <th>&nbsp;&nbsp;</th>
-
-
             </tr>
           </thead>
           {
@@ -66,6 +64,7 @@ function Student() {
 
         </table>
       </div>
+
     </>
 
 
