@@ -18,7 +18,7 @@ function Student() {
     fetch("https://api.github.com/users").then((result) => {
       result.json().then((response) => {
         console.log("result", response)
-        setData(response.data);
+        setData(response);
       });
     });
   }, []);

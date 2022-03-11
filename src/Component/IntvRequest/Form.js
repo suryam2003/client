@@ -17,7 +17,6 @@ function Intvrequest() {
     time: "",
     invitedStudent: "",
     sortMsg: "",
-
   })
 
   const handleChange = e => {
@@ -46,7 +45,7 @@ function Intvrequest() {
   return (
     <>
       <Nav_side />
-      <div className="formContainer col-9">
+      <div className="formContainer col-9" id="intvCtn">
         <h3 className="heading">Interview Request</h3>
         <div className="form">
           <div className="inputControl">
