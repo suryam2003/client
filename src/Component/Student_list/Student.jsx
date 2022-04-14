@@ -11,8 +11,6 @@ import './button.css'
 function Student() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    // https://api.github.com/users
-    // https://iteg.herokuapp.com/api/Student_Reg/Registation
     fetch("https://api.github.com/users").then((result) => {
       result.json().then((response) => {
         console.log("result", response.data)
